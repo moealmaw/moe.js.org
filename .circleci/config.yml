@@ -1,0 +1,22 @@
+version: 2.1
+jobs:
+   build:
+     parameters:
+       elkHost:
+         type: env_var_name
+         default: string
+       elAppName:
+         type: env_var_name
+         default: string
+     docker:
+       - image: ubuntu:latest
+     steps:
+       - run: |
+           echo --elkHost ${<< parameters.elkHost >>} \\
+                 --ebAppName ${<< parameters.ebAppName >>}
+workflows:
+  workflow:
+    jobs:
+      - build:
+          elkHost: ELK_HOST
+          ebAppName: EB_APP_NAME
