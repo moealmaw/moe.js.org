@@ -6,7 +6,7 @@ jobs:
          type: env_var_name
          default: string
        ebAppName:
-         type: env_var_name
+         type: string
          default: string
      docker:
        - image: ubuntu:latest
@@ -19,4 +19,4 @@ workflows:
     jobs:
       - build:
           elkHost: ELK_HOST
-          ebAppName: EB_APP_NAME
+          ebAppName: $EB_APP_NAME
