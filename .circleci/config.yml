@@ -12,8 +12,8 @@ jobs:
        - image: ubuntu:latest
      steps:
        - run: |
-           echo --elkHost ${<< parameters.elkHost >>} \\
-                 --ebAppName ${<< parameters.ebAppName >>}
+           echo "--elkHost ${<< parameters.elkHost >>} \\
+                 --ebAppName ${<< parameters.ebAppName >>}"
 workflows:
   workflow:
     jobs:
