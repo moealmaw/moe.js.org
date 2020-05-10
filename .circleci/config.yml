@@ -5,7 +5,7 @@ jobs:
        elkHost:
          type: env_var_name
          default: string
-       elAppName:
+       ebAppName:
          type: env_var_name
          default: string
      docker:
